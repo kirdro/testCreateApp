@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-rows: 50px max-content;
+  font-family: 'Source Sans Pro', sans-serif;
+  justify-items: center;
 }
 
 .App-logo {
@@ -26,6 +30,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.content {
+  max-width: 1200px;
+  width: 85vw;
 }
 
 @keyframes App-logo-spin {

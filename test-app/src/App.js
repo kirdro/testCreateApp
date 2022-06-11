@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import MainHeader from "./components/header";
+import {DivBackHeaderSC} from "./styles/header.styles";
+import MainPost from "./components/posts";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/*<img src={logo} className="App-logo" alt="logo" />*/}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        {/*<a*/}
-        {/*  className="App-link"*/}
-        {/*  href="https://reactjs.org"*/}
-        {/*  target="_blank"*/}
-        {/*  rel="noopener noreferrer"*/}
-        {/*>*/}
-        {/*  Learn React*/}
-        {/*</a>*/}
-      </header>
+        <MainHeader></MainHeader>
+        <DivBackHeaderSC></DivBackHeaderSC>
+        <div className={'content'}>
+            <MainPost/>
+        </div>
     </div>
   );
 }
