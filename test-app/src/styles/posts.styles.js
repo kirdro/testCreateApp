@@ -20,4 +20,68 @@ export const DivBoxPostItemSC = styled.div`
   padding: 20px;
   border-radius: 20px;
   box-sizing: border-box;
-`
+  display: grid;
+  grid-template-rows: 30px 30px max-content 20px;
+  p{
+    text-align: left;
+  }
+`;
+
+export const DivBoxCreatePostSC = styled.div`
+  width: 100%;
+  height: max-content;
+  display: grid;
+  grid-template-rows: repeat(4,minmax(30px, max-content));
+  gap: 20px;
+  background: rgb(131, 76, 105);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+`;
+
+export const InputCreatePostSC = styled.input`
+    background: initial;
+  border: none;
+  border-bottom: 1px solid rgb(121, 66, 95);
+  color:rgb(230, 245, 255);
+  :focus{
+    border: none;
+    border-bottom: 1px solid rgb(161, 106, 135);
+    outline: none;
+  }
+  ::placeholder{
+    color:rgb(200, 215, 235);
+  }
+`;
+
+export const TextAreaCreatePostSC = styled.textarea`
+    background: initial;
+  border: none;
+  border-bottom: 1px solid rgb(121, 66, 95);
+  color:rgb(230, 245, 255);
+  min-height:30px;
+  font-family: 'Source Code Pro', monospace;
+  :focus{
+    border: none;
+    border-bottom: 1px solid rgb(161, 106, 135);
+    outline: none;
+  }
+  ::placeholder{
+    color:rgb(200, 215, 235);
+  }
+`;
+
+export const ButtonPostSC = styled.button`
+   background: rgb(60, 79, 101);
+  border: none;
+  color:rgb(230, 245, 255);
+  border-radius: 15px;
+  cursor: pointer;
+  :hover{
+    background: rgb(50, 69, 91);
+  }
+  :active{
+    background: rgb(40, 59, 81);
+  }
+`;
+

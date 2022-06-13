@@ -2,7 +2,7 @@
   text-align: center;
   display: grid;
   grid-template-rows: 50px max-content;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Code Pro', monospace;
   justify-items: center;
 }
 

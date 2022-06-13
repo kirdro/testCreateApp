@@ -21,7 +21,7 @@ export const DivBackHeaderSC = styled.div`
 `;
 
 export const ButtonHeaderSC = styled.button`
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Code Pro', monospace;
   background: initial;
   border: none;
   border-right: 1px solid rgb(50, 69, 91);
