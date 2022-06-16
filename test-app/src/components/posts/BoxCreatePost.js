@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {ButtonPostSC, DivBoxCreatePostSC, InputCreatePostSC, TextAreaCreatePostSC} from "../../styles/posts.styles";
 import { DateTime } from "luxon";
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 
 const BoxCreatePost = (props) => {
@@ -22,14 +24,25 @@ const BoxCreatePost = (props) => {
         }
     }
 
+
     const onClickButton = () => {
-        const _data = {
-            name,
-            namePost,
-            text,
-            date: DateTime.now()
+
+        if (name && namePost && text) {
+            const _data = {
+                name,
+                namePost,
+                text,
+                date: DateTime.now()
+            }
+
+            addNewPost(_data)
         }
-        addNewPost(_data)
+        else {
+            NotificationManager.error('Имеются пустые поля. Заполните все поля', 'Ошибка', 5000, () => {
+                // alert('callback');
+            });
+        }
+
     }
 
     return (
@@ -60,6 +73,7 @@ const BoxCreatePost = (props) => {
             <ButtonPostSC
                 onClick={onClickButton}
             >Сохранить</ButtonPostSC>
+            <NotificationContainer/>
         </DivBoxCreatePostSC>
     );
 }

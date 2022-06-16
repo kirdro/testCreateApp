@@ -22,8 +22,11 @@ export const DivBoxPostItemSC = styled.div`
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 30px 30px max-content 20px;
+  justify-items: left;
   p{
     text-align: left;
+    background: rgb(60, 79, 101);
+    color:rgb(230, 245, 255);
   }
 `;
 
@@ -84,4 +87,9 @@ export const ButtonPostSC = styled.button`
     background: rgb(40, 59, 81);
   }
 `;
+
+export const SpanTimeSC = styled.span`
+  font-size: 12px;
+  text-decoration: underline;
+`
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {DivBoxPostItemSC} from "../../styles/posts.styles";
+import {DivBoxPostItemSC, SpanTimeSC} from "../../styles/posts.styles";
 import { DateTime } from "luxon";
 
 const Post = (props) => {
@@ -21,7 +21,7 @@ const Post = (props) => {
                 {post.text}
             </p>
             {
-                post.date ? <span>{DateTime.fromISO(post.date).setLocale('ru').toFormat('dd MMMM yyyy')}</span> : null
+                post.date ? <SpanTimeSC>{DateTime.fromISO(post.date).setLocale('ru').toFormat('dd MMMM yyyy')}</SpanTimeSC> : null
             }
         </DivBoxPostItemSC>
     );
