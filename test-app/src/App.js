@@ -5,6 +5,7 @@ import {DivBackHeaderSC} from "./styles/header.styles";
 import MainPost from "./components/posts";
 import { Routes, Route, Link } from "react-router-dom";
 import MainGallery from "./components/gallery";
+import MainDraw from "./components/draw";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/" element={null} />
                 <Route path="/blog" element={<MainPost/>} />
                 <Route path="/gallery" element={<MainGallery/>} />
+                <Route path="/draw" element={<MainDraw/>} />
             </Routes>
         </div>
     </div>
